@@ -6,11 +6,11 @@ local plugins = {
     },
     {
       "aklt/plantuml-syntax",
-      lazy = false,
+      ft = {"plantuml", "puml"},
     },
     {
       "weirongxu/plantuml-previewer.vim",
-      lazy = false,
+:      ft = {"plantuml", "puml"},
     },
     -- Rust debugging
     {
