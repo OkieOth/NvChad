@@ -10,7 +10,7 @@ local plugins = {
     },
     {
       "weirongxu/plantuml-previewer.vim",
-:      ft = {"plantuml", "puml"},
+      ft = {"plantuml", "puml"},
     },
     -- Rust debugging
     {
