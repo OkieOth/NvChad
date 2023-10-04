@@ -109,8 +109,15 @@ local plugins = {
     },
     config = function (_, opts)
       local path = "~/.local/share/nvim/mason/packages/debugpy/venv/bin/python"
-      require("nvim-dap-python").setup(path)
+      require("dap-python").setup(path)
       require("core.utils").load_mappings("dap_python")
+      table.insert(require('dap').configurations.python, {
+        type = 'python',
+        request = 'launch',
+        name = 'My custom launch configuration',
+        program = '${file}',
+  -- ... more options, see https://github.com/microsoft/debugpy/wiki/Debug-configuration-settings
+      })
     end
   },
   {
